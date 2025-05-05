@@ -46,8 +46,8 @@ def create_table_tab(table_name):
 
     tree = ttk.Treeview(frame, columns=columns, show="headings")
     for col in columns:
-        tree.heading(col, text=col)
-        tree.column(col, width=120)
+        tree.heading(col, text=col, anchor="center")  # Center the column headings
+        tree.column(col, width=120, anchor="center")  # Center the column entries
     tree.pack(fill="both", expand=True, padx=10, pady=10)
 
     entry_frame = ttk.Frame(frame)
